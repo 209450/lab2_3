@@ -20,23 +20,23 @@ public class SimilarityFinderTest {
     }
 
     @Test public void bothSequencesAreEmptyReturnOne() {
-        seq1 = new int[]{};
-        seq2 = new int[]{};
+        seq1 = new int[] {};
+        seq2 = new int[] {};
 
-        assertThat(similarityFinder.calculateJackardSimilarity(seq1,seq2),is(1.0d));
+        assertThat(similarityFinder.calculateJackardSimilarity(seq1, seq2), is(1.0d));
     }
 
     @Test public void oneSequenceIsEmptyReturnZero() {
-        seq1 = new int[]{1,2};
-        seq2 = new int[]{};
+        seq1 = new int[] {1, 2};
+        seq2 = new int[] {};
 
-        assertThat(similarityFinder.calculateJackardSimilarity(seq1,seq2),is(0.0d));
+        assertThat(similarityFinder.calculateJackardSimilarity(seq1, seq2), is(0.0d));
     }
 
     @Test public void bothSequencesHaveSameNumberReturnZero() {
-        seq1 = new int[]{1,2,4,5};
-        seq2 = new int[]{1,2,4,5};
+        seq1 = new int[] {1, 2, 4, 5};
+        seq2 = new int[] {1, 2, 4, 5};
 
-        assertThat(similarityFinder.calculateJackardSimilarity(seq1,seq2),is(0.0d));
+        assertThat(similarityFinder.calculateJackardSimilarity(seq1, seq2), is(0.0d));
     }
 }
